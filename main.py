@@ -73,4 +73,4 @@ while True:
     elif userChoice == "q":
         sys.exit()
 
-    print("")
+    print(" ")
