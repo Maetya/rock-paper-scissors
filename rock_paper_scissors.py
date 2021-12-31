@@ -1,27 +1,33 @@
 import sys
 import random
 
-availableChoices = ["r", "p", "s"]
-
 winCount = 0
 lossCount = 0
 tieCount = 0
+result = "dasd"
 
+
+availableChoices = ["r", "p", "s"]
 
 def printHeader():
     print("ROCK, PAPER, SCISSORS")
     print(str(winCount) + " Wins, " + str(lossCount) + " Losses, " + str(tieCount) + " Ties")
     print("Enter your move: (R)ock (P)aper (S)cissors or (Q)uit")
 
+def returnScore():
+    return (str(winCount) + " Wins, " + str(lossCount) + " Losses, " + str(tieCount) + " Ties")
+
+def returnResult():
+    return result
 
 def showdown(userChoice):
     global winCount
     global lossCount
     global tieCount
     global computerChoice
-# while True:
+    global result
+
     printHeader()
-    # userChoice = input().lower()
     computerChoice = availableChoices[random.randint(0, 2)]
 
     if userChoice == "r":
@@ -29,51 +35,62 @@ def showdown(userChoice):
         if computerChoice == "s":
             winCount = winCount + 1
             print("SCISSORS")
-            print("You win!")
+            result = "You win!"
+            print(result)
+
 
         if computerChoice == "p":
             lossCount = lossCount + 1
             print("PAPER")
-            print("You lose!")
+            result = "You lose!"
+            print(result)
 
         if computerChoice == "r":
             tieCount = tieCount + 1
             print("ROCK")
-            print("It's a tie!")
-
+            result = "It's a tie!"
+            print(result)
 
     elif userChoice == "p":
         print("PAPER versus...")
         if computerChoice == "s":
             lossCount = lossCount + 1
             print("SCISSORS")
-            print("You lose!")
+            result = "You lose!"
+            print(result)
 
         if computerChoice == "r":
             winCount = winCount + 1
             print("ROCK")
-            print("You win!")
+            result = "You win!"
+            print(result)
 
         if computerChoice == "p":
             tieCount = tieCount + 1
             print("PAPER")
-            print("It's a tie!")
+            result = "It's a tie!"
+            print(result)
 
     elif userChoice == "s":
         if computerChoice == "r":
             lossCount = lossCount + 1
             print("ROCK")
-            print("You lose!")
+            result = "You lose!"
+            print(result)
 
         if computerChoice == "p":
             winCount = winCount + 1
             print("PAPER")
-            print("You win!")
+            result = "You win!"
+            print(result)
+
+
 
         if computerChoice == "s":
             tieCount = tieCount + 1
             print("s")
-            print("It's a tie!")
+            result = "It's a tie!"
+            print(result)
 
     elif userChoice == "q":
         sys.exit()
@@ -82,5 +99,3 @@ def showdown(userChoice):
     print(" ")
 
     return computerChoice
-
-
