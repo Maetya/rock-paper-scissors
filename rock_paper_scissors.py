@@ -4,7 +4,7 @@ import random
 winCount = 0
 lossCount = 0
 tieCount = 0
-result = "dasd"
+
 
 
 availableChoices = ["r", "p", "s"]
