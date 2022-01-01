@@ -5,10 +5,9 @@ winCount = 0
 lossCount = 0
 tieCount = 0
 
-
-
 availableChoices = ["r", "p", "s"]
 
+# printHeader() prints a static header, the current score, and the available inputs choices.
 def printHeader():
     print("ROCK, PAPER, SCISSORS")
     print(str(winCount) + " Wins, " + str(lossCount) + " Losses, " + str(tieCount) + " Ties")
@@ -20,14 +19,16 @@ def returnScore():
 def returnResult():
     return result
 
+# The showdown() function compares the user's choice and computer's choice against if-conditions.
+# Increments depending on whether the user wins, lose, or ties.
+# The function prints the game outcome and returns the computer's choice.
+# The user is able to exit the code by inputting "q".
 def showdown(userChoice):
     global winCount
     global lossCount
     global tieCount
-    global computerChoice
     global result
 
-    printHeader()
     computerChoice = availableChoices[random.randint(0, 2)]
 
     if userChoice == "r":
@@ -37,7 +38,6 @@ def showdown(userChoice):
             print("SCISSORS")
             result = "You win!"
             print(result)
-
 
         if computerChoice == "p":
             lossCount = lossCount + 1
@@ -84,8 +84,6 @@ def showdown(userChoice):
             result = "You win!"
             print(result)
 
-
-
         if computerChoice == "s":
             tieCount = tieCount + 1
             print("s")
@@ -94,7 +92,6 @@ def showdown(userChoice):
 
     elif userChoice == "q":
         sys.exit()
-
 
     print(" ")
 
