@@ -54,17 +54,18 @@ def displayPressedButton(userChoice):
     clearPreviousTextBox = Label(text="               ", bg='#ffffff', font=(font_type, 25))
     clearPreviousTextBox.grid(row=4, column=1)
 
-    if returnResult() == "It's a tie!":
-        resultTextBox = Label(text=returnResult(), bg='#ffffff', font=(font_type, 25), foreground="black")
+    # TODO Could possibly create a function for resultLayout() or layoutResult().
+    if getResult() == "It's a tie!":
+        resultTextBox = Label(text=getResult(), bg='#ffffff', font=(font_type, 25), foreground="black")
         resultTextBox.grid(row=4, column=1)
-    elif returnResult() == "You win!":
-        resultTextBox = Label(text=returnResult(), bg='#ffffff', font=(font_type, 25), foreground="green")
+    elif getResult() == "You win!":
+        resultTextBox = Label(text=getResult(), bg='#ffffff', font=(font_type, 25), foreground="green")
         resultTextBox.grid(row=4, column=1)
-    elif returnResult() == "You lose!":
-        resultTextBox = Label(text=returnResult(), bg='#ffffff', font=(font_type, 25), foreground="red")
+    elif getResult() == "You lose!":
+        resultTextBox = Label(text=getResult(), bg='#ffffff', font=(font_type, 25), foreground="red")
         resultTextBox.grid(row=4, column=1)
     else:
-        resultTextBox = Label(text=returnResult(), bg='#ffffff', font=(font_type, 25))
+        resultTextBox = Label(text=getResult(), bg='#ffffff', font=(font_type, 25))
         resultTextBox.grid(row=4, column=1)
 
     verseTextBox = Label(text="VS", bg='#ffffff', font=(font_type, 40))
