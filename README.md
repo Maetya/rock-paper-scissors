@@ -19,3 +19,6 @@ Then run the following command and the rock, paper, and scissors GUI should appe
 `python main.py`
 
 ![Screenshot of the rock, paper, and scissors GUI](https://github.com/Maetya/rock-paper-scissors/blob/main/img/rock-paper-scissors-screenshot.PNG)
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
