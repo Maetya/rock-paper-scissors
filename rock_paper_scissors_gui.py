@@ -77,14 +77,14 @@ def displayPressedButton(userChoice):
 # Initializes a window with the specified dimensions, title, background colour and disables the minimize/maximize button.
 window = Tk()
 window.geometry("515x590")
+# window.geometry("1000x1000")
 window.title("Rock Paper and Scissors")
 window['background'] = '#ffffff'
 window.resizable(0, 0)
 
 # Imports the rock, scissors, and paper icons.
-img_rock = PhotoImage(file="images/rock.png")
-img_scissors = PhotoImage(file="images/scissors.png")
-img_paper = PhotoImage(file="images/paper.png")
-
+img_rock = PhotoImage(file="img/rock_yellow.png")
+img_scissors = PhotoImage(file="img/scissors_red.png")
+img_paper = PhotoImage(file="img/paper_blue.png")
 displayStaticLayout()
 window.mainloop()
